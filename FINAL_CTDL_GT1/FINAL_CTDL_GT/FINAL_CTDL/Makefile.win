@@ -1,0 +1,70 @@
+# Project: CTDL
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = main.o HangThuoc.o Thuoc.o PhieuNhap.o CTPhieuNhap.o GiaoDien.o DoaHoa.o DongLinh.o DKK.o DongXuat.o KCN.o PhieuLinh.o NVKiemKe.o NhanVien.o PhieuXuat.o
+LINKOBJ  = main.o HangThuoc.o Thuoc.o PhieuNhap.o CTPhieuNhap.o GiaoDien.o DoaHoa.o DongLinh.o DKK.o DongXuat.o KCN.o PhieuLinh.o NVKiemKe.o NhanVien.o PhieuXuat.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = CTDL.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+HangThuoc.o: HangThuoc.cpp
+	$(CPP) -c HangThuoc.cpp -o HangThuoc.o $(CXXFLAGS)
+
+Thuoc.o: Thuoc.cpp
+	$(CPP) -c Thuoc.cpp -o Thuoc.o $(CXXFLAGS)
+
+PhieuNhap.o: PhieuNhap.cpp
+	$(CPP) -c PhieuNhap.cpp -o PhieuNhap.o $(CXXFLAGS)
+
+CTPhieuNhap.o: CTPhieuNhap.cpp
+	$(CPP) -c CTPhieuNhap.cpp -o CTPhieuNhap.o $(CXXFLAGS)
+
+GiaoDien.o: GiaoDien.cpp
+	$(CPP) -c GiaoDien.cpp -o GiaoDien.o $(CXXFLAGS)
+
+DoaHoa.o: DoaHoa.cpp
+	$(CPP) -c DoaHoa.cpp -o DoaHoa.o $(CXXFLAGS)
+
+DongLinh.o: DongLinh.cpp
+	$(CPP) -c DongLinh.cpp -o DongLinh.o $(CXXFLAGS)
+
+DKK.o: DKK.cpp
+	$(CPP) -c DKK.cpp -o DKK.o $(CXXFLAGS)
+
+DongXuat.o: DongXuat.cpp
+	$(CPP) -c DongXuat.cpp -o DongXuat.o $(CXXFLAGS)
+
+KCN.o: KCN.cpp
+	$(CPP) -c KCN.cpp -o KCN.o $(CXXFLAGS)
+
+PhieuLinh.o: PhieuLinh.cpp
+	$(CPP) -c PhieuLinh.cpp -o PhieuLinh.o $(CXXFLAGS)
+
+NVKiemKe.o: NVKiemKe.cpp
+	$(CPP) -c NVKiemKe.cpp -o NVKiemKe.o $(CXXFLAGS)
+
+NhanVien.o: NhanVien.cpp
+	$(CPP) -c NhanVien.cpp -o NhanVien.o $(CXXFLAGS)
+
+PhieuXuat.o: PhieuXuat.cpp
+	$(CPP) -c PhieuXuat.cpp -o PhieuXuat.o $(CXXFLAGS)
